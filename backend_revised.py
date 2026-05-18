@@ -42,10 +42,9 @@ def index():
         else:
             predict = "Something went wrong !!"
         
-        return render_template("index.html", predict=predict)
+        return jsonify({"predict":predict})
     
-    else:
-        return render_template("index.html")
+    return render_template("index.html")
 
 
 
